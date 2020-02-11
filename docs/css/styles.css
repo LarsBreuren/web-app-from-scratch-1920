@@ -15,26 +15,59 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+#places {
+  display: flex;
+}
+
+body article {
+  background-color:#fff;
+  color: #000;
+  padding: 1em 2em;
+  border-radius: 10px;
+  width: 33.333%;
+  text-align: center;
+  border: 2px solid #000;
+  margin: 0 1em;
+  box-sizing: border-box;
+}
+
+.visable {
+  opacity: 1 !important;
+}
+
+#details {
+  opacity: 0;
+}
+
+body section {
+  margin: 1em 0;
+}
+
 main {
   max-width: 860px;
   margin: 10vh auto;
-  padding:0 2rem;
+  padding: 0 2rem;
 }
+
 header {
   color: var(--dark);
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 h1 {
   font-size: 2vw;
   font-family: 'Faster One', cursive;
 }
+
 h2 {
-  font-size: 2em;
-  margin-top: 1.5em;
+  font-size: 1em;
+  margin-top: 1em;
   font-family: 'Faster One', cursive;
 }
+
 #article {
   background-color: #fff;
   color: #000;
@@ -44,6 +77,7 @@ h2 {
   text-align: center;
   border: 2px solid #000;
 }
+
 ul {
   display: flex;
   justify-content: space-between;
@@ -51,39 +85,48 @@ ul {
   padding: 0;
   margin: 0 -1rem;
 }
+
 ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
 }
+
 ul img {
   border: 2px solid var(--light);
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
 img {
   max-width: 100%;
 }
-section#lecturers ul { 
-  flex-wrap:wrap;
-  
+
+section#lecturers ul {
+  flex-wrap: wrap;
+
 }
+
 section#lecturers li {
-  width:45%;
-  text-align:center;
+  width: 45%;
+  text-align: center;
 }
+
 section#lecturers li:nth-child(3) {
-  width:100%
+  width: 100%
 }
+
 section#lecturers img {
   border-radius: 100%;
   margin-right: 1em;
-  width:20vw;
+  width: 20vw;
 }
+
 section#lecturers a {
-  white-space:nowrap;
+  white-space: nowrap;
 }
+
 .button {
   background: var(--light);
   color: var(--dark);
