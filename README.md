@@ -30,4 +30,8 @@ The API requests are capped at 1000 per day, after that it will be 0.0001$ per r
 * Change background based on current weather
 * Use of promise all to clean up code
 
+## Actor diagram ##
+![Actor diagram](https://user-images.githubusercontent.com/43336468/74429753-d160e480-4e5b-11ea-9f58-91cdb3fabbed.jpg)
 
+## Interaction diagram ##
+![Interaction Diagram](https://user-images.githubusercontent.com/43336468/74429755-d2921180-4e5b-11ea-826a-d535144e7122.jpg)
