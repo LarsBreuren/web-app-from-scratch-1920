@@ -7,7 +7,7 @@ https://larsbreuren.github.io/web-app-from-scratch-1920/
 
 
 ## API Request ##
-* The app fetches the following dasta 
+The app fetches the following dasta 
   * Current forecast
   * Current forecast on location
 
@@ -15,5 +15,17 @@ https://larsbreuren.github.io/web-app-from-scratch-1920/
 The API requests are capped at 1000 per day, after that it will be 0.0001$ per request.
 
 ## Design patterns ##
+ * camelCasing
+ * use of ;
+ * single tab
+ * no vars 
+
+## Micro libraries used ##
+* Routie for routes
+
+## Nice to haves ##
+* Using current location for advice
+* Change background based on current weather
+* Use of promise all to clean up code
 
 
