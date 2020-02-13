@@ -1,4 +1,6 @@
 # Web app from scratch with Darksky API #
+This app uses data from the Darksky API and calculates if the weather is any good to ride a motorcycle. 
+Of course there will be riders that never stop riding so it will also show the relevant information so they can decide for themselves.
 
 ![Banner2](https://user-images.githubusercontent.com/43336468/74424462-49c2a800-4e52-11ea-86ae-b05a1a435e95.png)
 
