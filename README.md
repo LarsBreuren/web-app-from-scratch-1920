@@ -1,55 +1,37 @@
+# Web app from scratch with Darksky API #
+This app uses data from the Darksky API and calculates if the weather is any good to ride a motorcycle. 
+Of course there will be riders that never stop riding so it will also show the relevant information so they can decide for themselves.
 
-    linkToLiveDemo? review (assignment): assignGrade (1);
-    What does your app do, what is the goal? (passing butter)
-    Which actors are there in your application? (actor diagram)
-    Which API is used and what are the limitations? (rate limit)
-    How does flowed interaction through the application? (interaction diagram)
-    Which design patterns and best practices
-    What would you like to add (feature wishlist / backlog)
+![Banner2](https://user-images.githubusercontent.com/43336468/74424462-49c2a800-4e52-11ea-86ae-b05a1a435e95.png)
 
-## Program
+## Live demo ##
+https://larsbreuren.github.io/web-app-from-scratch-1920/ 
 
-### Week 1 - Hello API 🐒
 
-Goal: Retrieve data from an API and render it in an overview page.
+## API Request ##
+The app fetches the following dasta 
+  * Current forecast
+  * Current forecast on location
 
-[Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-1920/blob/master/course/week-1.md)
+## API restrictions ##
+The API requests are capped at 1000 per day, after that it will be 0.0001$ per request.
 
-[Slides](https://drive.google.com/open?id=1Rjl9xqXoKniQSRJPdkU1O5YwWC33SJK8KiV0a-H_xZU)
+## Design patterns ##
+ * camelCasing
+ * use of ;
+ * single tab
+ * no vars 
 
-### Week 2 - Design and Refactor 🛠
+## Micro libraries used ##
+* Routie for routes
 
-Goal: Design the web app. Add routes and states. Rendering detail page.
+## Nice to haves ##
+* Using current location for advice
+* Change background based on current weather
+* Use of promise all to clean up code
 
-[Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-1920/blob/master/course/week-2.md)
+## Actor diagram ##
+![Actor diagram](https://user-images.githubusercontent.com/43336468/74429753-d160e480-4e5b-11ea-9f58-91cdb3fabbed.jpg)
 
-[Slides](https://drive.google.com/open?id=1IqQeu1m0dQiSC_KCvrn8eencAgtYe7X6qT-gm0n9Bmc)
-
-### Week 3 - Wrapping up 🎁
-
-Goal:
-Manipulate data. Split code into modules. Reflect on end result
-
-[Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-1920/blob/master/course/week-3.md)
-
-[Slides](https://drive.google.com/open?id=1BSzGYNLMgtHD4HRnK7f0DgyTv4Pg3xsQwD_eYNo7v0Y)
-
-<!-- Add a link to your live demo in Github Pages 🌐-->
-
-<!-- ☝️ replace this description with a description of your own work -->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+## Interaction diagram ##
+![Interaction Diagram](https://user-images.githubusercontent.com/43336468/74429755-d2921180-4e5b-11ea-826a-d535144e7122.jpg)
