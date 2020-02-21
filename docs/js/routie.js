@@ -222,3 +222,9 @@ routie('details', function() {
    console.log('klikken!');
    details.classList.toggle("visable");
 });
+
+routie('details', function() {
+  let details = document.getElementById("details");
+  console.log('klikken!');
+  details.classList.toggle("visable");
+});

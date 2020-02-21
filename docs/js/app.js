@@ -1,3 +1,6 @@
+import { test } from '../data/initial.js';
+
+test();
 initialData();
 
 function initialData() {
@@ -14,7 +17,6 @@ function initialData() {
         section.appendChild(article);
         fetchData(`${locaties[property]}`, `${property}`, article );
   }
-
 }
 
 function fetchData(loc,name, article){
@@ -22,7 +24,6 @@ function fetchData(loc,name, article){
     .then((response) => {
       return response.json();
     })
-
     .then((myJson) => {
       let obj = {
         locatie: name,
@@ -49,11 +50,12 @@ function fetchData(loc,name, article){
 }
 
 function buildUrl(locatie) {
-  let endpoint = 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/'
-  let key = "60e53b3010cd5224c2ec5d685d4b320b/"
-  let end = "?units=si"
+  const endpoint = 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/'
+  const key = "60e53b3010cd5224c2ec5d685d4b320b/"
+  const end = "?units=si"
   return endpoint + key + locatie + end
 }
+
 
 function rateWeather(current) {
   let temp = current;
