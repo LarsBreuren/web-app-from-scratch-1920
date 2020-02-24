@@ -20,7 +20,7 @@ body {
   display: flex;
 }
 
-main article:first-child{ font-weight: 600;}
+main li:first-child{ font-weight: 600;}
 
 body article {
   background-color:#fff;
