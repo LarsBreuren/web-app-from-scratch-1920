@@ -20,6 +20,8 @@ body {
   display: flex;
 }
 
+main article:first-child{ font-weight: 600;}
+
 body article {
   background-color:#fff;
   color: #000;
@@ -32,8 +34,17 @@ body article {
   box-sizing: border-box;
 }
 
+#places article{
+  text-align: left;
+  list-style: none;
+
+}
+
 .visable {
-  opacity: 1 !important;
+  display: block !important;
+}
+#mijdrecht, #amsterdam{ 
+  display: none;
 }
 
 #details {
