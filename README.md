@@ -24,11 +24,12 @@ The API requests are capped at 1000 per day, after that it will be 0.0001$ per r
 
 ## Micro libraries used ##
 * Routie for routes
+* transparency for rendering some HTML elements
 
 ## Nice to haves ##
 * Using current location for advice
 * Change background based on current weather
-* Use of promise all to clean up code
+* More scalable when using more locations
 
 ## Actor diagram ##
 ![Actor diagram](https://user-images.githubusercontent.com/43336468/74429753-d160e480-4e5b-11ea-9f58-91cdb3fabbed.jpg)
