@@ -1,7 +1,7 @@
-export function rateWeather(temp, wind, vision, locatie) {
+export function rateWeather(currentTemp, wind, vision, locatie) {
     let mark = 0;
 
-    if (temp > 5) {
+    if (currentTemp > 5) {
         mark += 3;
     } else {
         mark - 3;
@@ -18,9 +18,6 @@ export function rateWeather(temp, wind, vision, locatie) {
     } else {
         mark - 3;
     }
-
-    console.log(locatie);
-
 
     let advice = document.getElementById(locatie);
     let p = document.createElement("b");

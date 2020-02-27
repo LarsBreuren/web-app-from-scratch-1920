@@ -222,12 +222,10 @@ if (typeof module == 'undefined') {
 
 routie('mijdrecht', function () {
   let details1 = document.getElementById("mijdrecht");
-  console.log('Je hebt op Mijdrecht geklikt');
   details1.classList.toggle("visable");
 });
 
 routie('amsterdam', function () {
   let details2 = document.getElementById("amsterdam");
-  console.log('Je hebt op Amsterdam geklikt');
   details2.classList.toggle("visable");
 });

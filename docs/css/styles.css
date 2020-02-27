@@ -37,7 +37,6 @@ body article {
 #places article{
   text-align: left;
   list-style: none;
-
 }
 
 .visable {
@@ -56,8 +55,8 @@ body section {
 }
 
 main {
-  max-width: 860px;
-  margin: 10vh auto;
+  max-width: 900px;
+  margin: 5vh auto;
   padding: 0 2rem;
 }
 
@@ -155,4 +154,8 @@ a:visited {
 
 footer {
   font-style: italic;
+  position: fixed;
+  bottom: 0;
 }
+
+title{ display: block;}
