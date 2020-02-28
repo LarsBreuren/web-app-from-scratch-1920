@@ -30,6 +30,7 @@ The API requests are capped at 1000 per day, after that it will be 0.0001$ per r
 * Using current location for advice
 * Change background based on current weather
 * More scalable when using more locations
+* More advanched calculater to rate the weather
 
 ## Actor diagram ##
 ![Actor diagram](https://user-images.githubusercontent.com/43336468/75484324-d6b84600-59a8-11ea-8c6b-479463b05a85.jpg)
