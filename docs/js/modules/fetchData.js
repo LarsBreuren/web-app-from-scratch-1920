@@ -2,9 +2,10 @@ import { buildUrl } from './buildUrl.js';
 import { rateWeather } from './rateWeather.js';
 
 export function fetchData(location, name, article) {
+  // let temps = [];
     fetch(buildUrl(location)) //Use the url builder to make the correct URL
       .then((response) => { 
-        return response.json(); 
+        return response.json();
       })
       .then((weatherData) => {
         let details = { //Make an object with the desired data
@@ -17,12 +18,15 @@ export function fetchData(location, name, article) {
         const wind = details.Windsnelheid;
         const vision = details.Zicht;
         const locatie = details.locatie;
-        const timeZone = weatherData.timezone
+        const timeZone = weatherData.timezone;
+        
+        // temps.push(temp); 
 
         const footer = document.querySelector('footer'); //Show current timezone in footer
         const data = {
           timeZone: `Tijdzone: ${timeZone}`
         };
+
   
         setTimeout(renderTemplate(footer, data), 100); //Render transparency template
         function renderTemplate(element, data) {
@@ -30,7 +34,6 @@ export function fetchData(location, name, article) {
             Transparency.render(element, data);
           };
         }
-
         for (let [key, value] of Object.entries(details)) { //Make a list item from every element in the details
           let li = document.createElement("li");
           let textNode = document.createTextNode(`${key}: ${value}`);
@@ -41,5 +44,12 @@ export function fetchData(location, name, article) {
         rateWeather(temp,wind,vision, locatie); //Start rateWeahter function with the given variables
       });
 
+      //  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+      //  console.log(temps.reduce(reducer));
+       
   }
 
+    
+     
+     
+     

@@ -220,12 +220,12 @@ if (typeof module == 'undefined') {
   module.exports = Routie(window, true);
 }
 
-routie('mijdrecht', function () {
-  let details1 = document.getElementById("mijdrecht");
-  details1.classList.toggle("visable");
-});
+// routie('mijdrecht', function () {
+//   let details1 = document.getElementById("mijdrecht");
+//   details1.classList.toggle("visable");
+// });
 
-routie('amsterdam', function () {
-  let details2 = document.getElementById("amsterdam");
-  details2.classList.toggle("visable");
-});
+// routie('amsterdam', function () {
+//   let details2 = document.getElementById("amsterdam");
+//   details2.classList.toggle("visable");
+// });

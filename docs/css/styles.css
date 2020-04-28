@@ -6,7 +6,6 @@
 
 body {
   background-color: var(--dark);
-  color: var(--light);
   font-family: monospace;
   font-size: 1.5em;
   line-height: 1.5;
@@ -16,7 +15,7 @@ body {
   background-repeat: no-repeat;
 }
 
-#places {
+#locations {
   display: flex;
 }
 
@@ -41,9 +40,6 @@ body article {
 
 .visable {
   display: block !important;
-}
-#mijdrecht, #amsterdam{ 
-  display: none;
 }
 
 #details {

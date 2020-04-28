@@ -7,7 +7,7 @@ export function rateWeather(currentTemp, wind, vision, locatie) {
         mark - 3;
     }
 
-    if (wind < 15) {
+    if (wind < 10) {
         mark += 3;
     } else {
         mark - 3;
