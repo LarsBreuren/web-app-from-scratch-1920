@@ -1,13 +1,9 @@
-/*** Handle routes -> refactor into module later ***/
-
 routie({
-  //#giphy/425367
   ':id'
   :locatie => {
     updateUI(locatie);
   },
 });
-
 
 function updateUI(route) {
   const sections = document.querySelectorAll('section');
@@ -21,8 +17,8 @@ function updateUI(route) {
   activeSection.classList.add('active');
   activeSection.classList.add('checkDetails');
 }
+
 initialData();
-/*** Fetching data -> refactor into module later ***/
 function initialData() {
   const locations = {  //Object with cities and their coordinates. This way it is easier to manage content
     mijdrecht: "52.2050221,4.880913",
@@ -42,8 +38,17 @@ function fetchData(location, name) {
     .then((weatherData) => {
       render(weatherData, name);
       renderMenu(name);
+      temps.push(weatherData.currently.temperature)
     });
 }
+
+function isBigEnough(value) {
+  return value >= 10
+}
+
+let temps = [].filter(isBigEnough)
+console.log(temps); //0: 11 1: 11.95 2: 10 length: 3
+console.log(temps.length); //0
 
 function buildUrl(location) {
   const endpoint = 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/';
