@@ -1,25 +1,24 @@
 /*** Handle routes -> refactor into module later ***/
-const sections = document.querySelectorAll('section');
 
 routie({
   //#giphy/425367
-  'locatie/:id': locatie => {
-    console.log(locatie);
+  ':id'
+  :locatie => {
+    updateUI(locatie);
   },
-  network: () => {
-    updateUI('network');
-  },
-  console: () => {
-    updateUI('console');
-  },
-  debugger: () => {
-    updateUI('debugger');
-  },
-  errors: () => {
-    updateUI('errors');
-  }
 });
 
+
+function updateUI(route) {
+  const sections = document.querySelectorAll('section');
+
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
+  activeSection = document.querySelector(`[data-route=${route}]`);
+  console.log(activeSection);
+  activeSection.classList.add('active');
+}
 initialData();
 /*** Fetching data -> refactor into module later ***/
 function initialData() {
@@ -50,17 +49,18 @@ function buildUrl(location) {
   return endpoint + key + location + end; //Add the pieces together to make a nice link fetchData can work with
 }
 
-let section = document.getElementById("locations");
+let main = document.getElementById("locations");
 function render(weatherData, name) {
     const html = `
-            <article>
+            <section class="active" data-route="${name}">
             <h2>${name}  </h2>
             <ul>
               <li>Temperatuur: ${weatherData.currently.temperature} graden</li>
               <li>Windsnelheid: ${weatherData.currently.windSpeed} m/s</li>
               <li>Zicht: ${weatherData.currently.visibility} m</li>
             </ul>
-            </article>
+            <a href="#${name}"> Details </a>
+            </section>
           `;
-    section.insertAdjacentHTML('beforeend', html);
+    main.insertAdjacentHTML('beforeend', html);
 }
