@@ -14,10 +14,12 @@ function updateUI(route) {
 
   sections.forEach(section => {
     section.classList.remove('active');
+    section.classList.remove('checkDetails');
   });
   activeSection = document.querySelector(`[data-route=${route}]`);
   console.log(activeSection);
   activeSection.classList.add('active');
+  activeSection.classList.add('checkDetails');
 }
 initialData();
 /*** Fetching data -> refactor into module later ***/
@@ -39,6 +41,7 @@ function fetchData(location, name) {
     })
     .then((weatherData) => {
       render(weatherData, name);
+      renderMenu(name);
     });
 }
 
@@ -59,8 +62,22 @@ function render(weatherData, name) {
               <li>Windsnelheid: ${weatherData.currently.windSpeed} m/s</li>
               <li>Zicht: ${weatherData.currently.visibility} m</li>
             </ul>
+            <ul class="details">
+            <li>Bewolking: ${weatherData.currently.cloudCover} </li>
+            <li>Type weer: ${weatherData.currently.precipType}</li>
+            <li>Omschrijving: ${weatherData.daily.summary}</li>
+
+            </ul>
             <a href="#${name}"> Details </a>
             </section>
           `;
     main.insertAdjacentHTML('beforeend', html);
+}
+
+let menu = document.getElementById("menu");
+function renderMenu(name) {
+  const html = `
+          <li><a href="#${name}">${name}</a> </li>
+        `;
+  menu.insertAdjacentHTML('beforeend', html);
 }
