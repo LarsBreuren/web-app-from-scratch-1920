@@ -1,3 +1,7 @@
+let main = document.getElementById("locations");
+let menu = document.getElementById("menu");
+initialData();
+
 routie({
   ':id'
   :locatie => {
@@ -13,12 +17,10 @@ function updateUI(route) {
     section.classList.remove('checkDetails');
   });
   activeSection = document.querySelector(`[data-route=${route}]`);
-  console.log(activeSection);
   activeSection.classList.add('active');
   activeSection.classList.add('checkDetails');
 }
 
-initialData();
 function initialData() {
   const locations = {  //Object with cities and their coordinates. This way it is easier to manage content
     mijdrecht: "52.2050221,4.880913",
@@ -30,25 +32,16 @@ function initialData() {
   }
 }
 
-function fetchData(location, name) {
-  fetch(buildUrl(location)) //Use the url builder to make the correct URL
+async function fetchData(location, name) {
+  await fetch(buildUrl(location)) //Use the url builder to make the correct URL
     .then((response) => { 
       return response.json();
     })
     .then((weatherData) => {
       render(weatherData, name);
       renderMenu(name);
-      temps.push(weatherData.currently.temperature)
     });
 }
-
-function isBigEnough(value) {
-  return value >= 10
-}
-
-let temps = [].filter(isBigEnough)
-console.log(temps); //0: 11 1: 11.95 2: 10 length: 3
-console.log(temps.length); //0
 
 function buildUrl(location) {
   const endpoint = 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/';
@@ -57,7 +50,6 @@ function buildUrl(location) {
   return endpoint + key + location + end; //Add the pieces together to make a nice link fetchData can work with
 }
 
-let main = document.getElementById("locations");
 function render(weatherData, name) {
     const html = `
             <section class="active" data-route="${name}">
@@ -79,10 +71,10 @@ function render(weatherData, name) {
     main.insertAdjacentHTML('beforeend', html);
 }
 
-let menu = document.getElementById("menu");
 function renderMenu(name) {
   const html = `
           <li><a href="#${name}">${name}</a> </li>
         `;
   menu.insertAdjacentHTML('beforeend', html);
 }
+

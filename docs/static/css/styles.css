@@ -14,6 +14,20 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.arrays {
+  background-image: none;
+  color: #fff;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+main article {
+  border-top: 2px solid #fff;
+}
+.arrays h1{
+  font-family: unset;
+  margin-bottom: 50px;
+}
 nav{
   width: 100%;
 }
@@ -92,15 +106,7 @@ h2 {
   justify-content: center;
 }
 
-body article {
-  background-color: #fff;
-  color: #000;
-  padding: .5em;
-  border-radius: 10px;
-  text-align: center;
-  border: 2px solid #000;
-  box-sizing: border-box;
-}
+
 
 #locations ul {
   padding: 0;
