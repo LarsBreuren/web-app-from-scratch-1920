@@ -26,5 +26,6 @@ export function renderMenu(name) { //Add the city to the menu
   const html = `
           <li><a href="#${name}">${name}</a> </li>
         `;
+        
   menu.insertAdjacentHTML('beforeend', html);
 }

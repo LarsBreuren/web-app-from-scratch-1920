@@ -11,24 +11,24 @@ export function initialData() {
     for (const property in locations) {     //For each city run the fetch data
       fetchData(`${locations[property]}`, `${property}`);
     }
-  }
+}
   
-  export async function fetchData(location, name) {
-    let loading = document.getElementById("loading"); 
-    loading.classList.add('load'); //Show loading icon 
+export async function fetchData(location, name) {
+  let loading = document.getElementById("loading"); 
+  loading.classList.add('load'); //Show loading icon 
 
-    await fetch(buildUrl(location)) //Use the url builder to make the correct URL for each city
-      .then((response) => { 
-        return response.json();
-      })
-      .then((weatherData) => {
-        render(weatherData, name); //Render with the given weatherData
-        renderMenu(name); // Add city to menu
+  fetch(buildUrl(location)) //Use the url builder to make the correct URL for each city
+    .then((response) => { 
+      return response.json();
+    })
+    .then((weatherData) => {
+      render(weatherData, name); //Render with the given weatherData
+      renderMenu(name); // Add city to menu
 
-        loading.classList.remove('load'); //remove loading icon (data is retrieved)
-        var timeZone = { //Show the current timezone in the footer with transparency
-            name: weatherData.timezone
-          };
-        Transparency.render(document.querySelector(`#template`), timeZone)
-      });
-  }
+      loading.classList.remove('load'); //remove loading icon (data is retrieved)
+      var timeZone = { //Show the current timezone in the footer with transparency
+          name: weatherData.timezone
+        };
+      Transparency.render(document.querySelector(`#template`), timeZone)
+    });
+}
