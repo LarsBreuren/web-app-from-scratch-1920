@@ -4,14 +4,10 @@ document.getElementById("button").addEventListener("click", inputData);
 
 let main = document.getElementById("locations");
 let menu = document.getElementById("menu");
-
-
 initialData();
 routie({
-  ':id'
-  :locatie => {
+  ':id' :locatie => {
     updateUI(locatie);
-    console.log('Locatie = ' + locatie)
   },
 });
 
@@ -30,7 +26,8 @@ function updateUI(route) {
     section.classList.remove('active');
     section.classList.remove('checkDetails');
   });
-  activeSection = document.querySelector(`[data-route=${route}]`);
+  console.log('ik doe wat' + route);
+  let activeSection = document.querySelector(`[data-route=${route}]`);
   activeSection.classList.add('active');
   activeSection.classList.add('checkDetails');
 }
