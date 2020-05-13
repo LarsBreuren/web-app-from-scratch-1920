@@ -1,5 +1,18 @@
+document.getElementById("button").addEventListener("click", inputData); 
+
 let main = document.getElementById("locations");
 let menu = document.getElementById("menu");
+
+
+function inputData(){
+  let latitude = document.getElementById('Latitude').value
+  let longitude = document.getElementById('Longitude').value
+  console.log(latitude + longitude)
+  let coordinates = latitude + ',' + longitude;
+  fetchData(coordinates, 'custom location');
+}
+
+
 initialData();
 
 routie({
@@ -47,6 +60,7 @@ function buildUrl(location) {
   const endpoint = 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/';
   const key = "60e53b3010cd5224c2ec5d685d4b320b/";
   const end = "?units=si";
+  console.log(location)
   return endpoint + key + location + end; //Add the pieces together to make a nice link fetchData can work with
 }
 

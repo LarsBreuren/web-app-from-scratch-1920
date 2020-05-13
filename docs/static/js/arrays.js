@@ -1,13 +1,10 @@
 let mapSection = document.getElementById("map");
 let filterSection = document.getElementById("filter");
 let reduceSection = document.getElementById("reduce");
+
 map();
 filter();
 reduce();
-
-function goodTemp(value) {
-    return value >= 12
-  }
 
 function map(){
       let fahrenheit = [110, 120, 90, 50, 20, 60, 90, 80, 150, 210, 40, 310];
@@ -27,9 +24,14 @@ function reduce(){
     renderReduce(fixedNumber)
 }
   
+function goodTemp(value) {
+  return value >= 12
+}
 
 function filter(){
-    let temps = [11, 12, 9, 5, 2, 6, 9, 8, 15, 21, 4, 31].filter(goodTemp)
+  let temperatures = [11, 12, 9, 5, 2, 6, 9, 8, 15, 21, 4, 31];
+    let temps = temperatures.filter(goodTemp)
+    console.log(temps)
     renderFilter(temps.length)
 }
 
