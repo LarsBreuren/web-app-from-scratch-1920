@@ -8,25 +8,25 @@ export function initialData() {
       amsterdam: "52.3702157,4.8951679",
       texel: "53.0547626,4.7977149"
     }
-    for (const property in locations) {     //For every location make an article inside the places id and give it an id with the city name.
+    for (const property in locations) {     //For each city run the fetch data
       fetchData(`${locations[property]}`, `${property}`);
     }
   }
   
   export async function fetchData(location, name) {
-    let loading = document.getElementById("loading");
-    loading.classList.add('load');
+    let loading = document.getElementById("loading"); 
+    loading.classList.add('load'); //Show loading icon 
 
-    await fetch(buildUrl(location)) //Use the url builder to make the correct URL
+    await fetch(buildUrl(location)) //Use the url builder to make the correct URL for each city
       .then((response) => { 
         return response.json();
       })
       .then((weatherData) => {
-        render(weatherData, name);
-        renderMenu(name);
-        
-        loading.classList.remove('load');
-        var timeZone = {
+        render(weatherData, name); //Render with the given weatherData
+        renderMenu(name); // Add city to menu
+
+        loading.classList.remove('load'); //remove loading icon (data is retrieved)
+        var timeZone = { //Show the current timezone in the footer with transparency
             name: weatherData.timezone
           };
         Transparency.render(document.querySelector(`#template`), timeZone)

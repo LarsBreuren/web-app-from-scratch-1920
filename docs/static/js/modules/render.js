@@ -1,7 +1,7 @@
 let main = document.getElementById("locations");
 let menu = document.getElementById("menu");
 
-export function render(weatherData, name) {
+export function render(weatherData, name) { //Render a section with the weatherdata of a given city
     const html = `
             <section class="active" data-route="${name}">
             <h2>${name}  </h2>
@@ -19,10 +19,10 @@ export function render(weatherData, name) {
             <a href="#${name}"> Details </a>
             </section>
           `;
-    main.insertAdjacentHTML('beforeend', html);
+    main.insertAdjacentHTML('beforeend', html); //add to html
 }
 
-export function renderMenu(name) {
+export function renderMenu(name) { //Add the city to the menu
   const html = `
           <li><a href="#${name}">${name}</a> </li>
         `;
