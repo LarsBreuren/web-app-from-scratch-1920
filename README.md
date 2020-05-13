@@ -14,7 +14,7 @@ The app fetches the following data
   * Current forecast on location
   * Forecast for the coming dates in a summary
 
-## API restrictions 
+# API restrictions 
 The API requests are capped at 1000 per day, after that it will be 0.0001$ per request.
 
 ## Design patterns 
