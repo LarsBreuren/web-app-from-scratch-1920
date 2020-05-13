@@ -21,6 +21,9 @@
     </nav>
     <h1>Waar is het lekker motorweer?</h1>
   </header>
+  <div id="loading">
+    <img src="/docs/static/img/loading.gif">
+  </div>
   <main id="locations">
   </main>
     <form>
@@ -37,8 +40,13 @@
   <script src="static/js/vendor/routie.min.js"></script>
   <script src="static/js/vendor/transparency.min.js"></script>
   <script src="static/js/app.js" type="module"></script>
-  <footer>
-    <text data-bind="timeZone"></text>
+
+  <!-- <footer>
+    <p id="template" data-bind="name"></p>
+  </footer> -->
+
+  <footer id="template">
+    <span data-bind="name">Loading...</span>
   </footer>
 
 </html>

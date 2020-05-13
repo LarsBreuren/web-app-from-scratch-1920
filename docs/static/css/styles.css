@@ -136,6 +136,16 @@ form {
   width: 100%;
 }
 
+#loading {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  margin: auto;
+  left: 0;
+  opacity: 0;
+}
+.load{ opacity: 1 !important;}
+
 #locations ul {
   padding: 0;
 }

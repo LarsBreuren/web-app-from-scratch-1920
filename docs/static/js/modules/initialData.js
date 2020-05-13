@@ -14,6 +14,9 @@ export function initialData() {
   }
   
   export async function fetchData(location, name) {
+    let loading = document.getElementById("loading");
+    loading.classList.add('load');
+
     await fetch(buildUrl(location)) //Use the url builder to make the correct URL
       .then((response) => { 
         return response.json();
@@ -21,5 +24,11 @@ export function initialData() {
       .then((weatherData) => {
         render(weatherData, name);
         renderMenu(name);
+        
+        loading.classList.remove('load');
+        var timeZone = {
+            name: weatherData.timezone
+          };
+        Transparency.render(document.querySelector(`#template`), timeZone)
       });
   }
