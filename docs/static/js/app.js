@@ -1,26 +1,27 @@
+import { test } from './modules/inputData.js';
+
 document.getElementById("button").addEventListener("click", inputData); 
 
 let main = document.getElementById("locations");
 let menu = document.getElementById("menu");
 
 
-function inputData(){
-  let latitude = document.getElementById('Latitude').value
-  let longitude = document.getElementById('Longitude').value
-  console.log(latitude + longitude)
-  let coordinates = latitude + ',' + longitude;
-  fetchData(coordinates, 'custom location');
-}
-
-
 initialData();
-
+test()
 routie({
   ':id'
   :locatie => {
     updateUI(locatie);
   },
 });
+
+function inputData(){
+  let latitude = document.getElementById('Latitude').value
+  let longitude = document.getElementById('Longitude').value
+  let name =  document.getElementById('Name').value
+  let coordinates = latitude + ',' + longitude;
+  fetchData(coordinates, name);
+}
 
 function updateUI(route) {
   const sections = document.querySelectorAll('section');
