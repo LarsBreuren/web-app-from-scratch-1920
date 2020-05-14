@@ -15,6 +15,7 @@ The app fetches the following data
   * Forecast for the coming dates in a summary
   
   Example of the given JSON data from darksky:
+  
   ![json](https://user-images.githubusercontent.com/43336468/81908891-1ff05d00-95ca-11ea-8fc6-8a04c981965c.png)
 
 
