@@ -13,6 +13,11 @@ The app fetches the following data
   * Current forecast
   * Current forecast on location
   * Forecast for the coming dates in a summary
+  
+  Example of the given JSON data from darksky:
+  
+  ![json](https://user-images.githubusercontent.com/43336468/81908891-1ff05d00-95ca-11ea-8fc6-8a04c981965c.png)
+
 
 ### API restrictions 
 The API requests are capped at 1000 per day, after that it will be 0.0001$ per request.
@@ -39,7 +44,8 @@ Object that are part of my code that handle functionality:
 
 ## Interaction diagram 
 How do the actors connect and work toghether. This diagram shows the flow of my app
-![Interacton](https://user-images.githubusercontent.com/43336468/81849231-89cf1f00-9556-11ea-8865-0ff66797c31e.jpg)
+![Interacton](https://user-images.githubusercontent.com/43336468/81909325-bae93700-95ca-11ea-8d97-908f34bc90b4.jpg)
+
 
 
 
