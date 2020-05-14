@@ -44,7 +44,8 @@ Object that are part of my code that handle functionality:
 
 ## Interaction diagram 
 How do the actors connect and work toghether. This diagram shows the flow of my app
-![Interacton](https://user-images.githubusercontent.com/43336468/81849231-89cf1f00-9556-11ea-8865-0ff66797c31e.jpg)
+![Interacton](https://user-images.githubusercontent.com/43336468/81909325-bae93700-95ca-11ea-8d97-908f34bc90b4.jpg)
+
 
 
 
